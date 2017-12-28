@@ -1,21 +1,20 @@
 package com.alsaril.scheduler.fragment
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import com.alsaril.scheduler.R
+import com.alsaril.scheduler.bindView
 import com.alsaril.scheduler.db.Task
 import com.alsaril.scheduler.db.TaskDAO
 import com.alsaril.scheduler.toast
 import kotlinx.coroutines.experimental.android.UI
 import kotlinx.coroutines.experimental.launch
-import kotterknife.bindView
 
-class NewTaskFragment : Fragment() {
+class NewTaskFragment : CustomFragment() {
     val taskName by bindView<EditText>(R.id.task_name)
     val ok by bindView<Button>(R.id.ok)
 

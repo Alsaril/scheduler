@@ -9,7 +9,7 @@ import com.alsaril.scheduler.fragment.TaskFragment
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var fragment: Fragment
+    private lateinit var fragment: Fragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.container, fragment)
+                .addToBackStack(null)
                 .commit()
     }
 
